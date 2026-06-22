@@ -7,7 +7,6 @@
 }
 
 
-
 body{
 
     font-family:'Segoe UI',sans-serif;
@@ -16,14 +15,12 @@ body{
 
     margin:0;
 
-
     background:
     linear-gradient(
         135deg,
         #667eea,
         #764ba2
     );
-
 
     display:flex;
 
@@ -44,40 +41,27 @@ body{
 
 .container{
 
-
     width:450px;
-
 
     padding:30px;
 
-
     background:
-
     rgba(255,255,255,0.22);
-
 
     backdrop-filter:blur(20px);
 
-
     border-radius:25px;
 
-
     box-shadow:
-
     0 25px 50px rgba(0,0,0,.25);
 
-
-
     animation:show .6s;
-
 
 }
 
 
 
-
 @keyframes show{
-
 
 from{
 
@@ -87,7 +71,6 @@ transform:translateY(40px);
 
 }
 
-
 to{
 
 opacity:1;
@@ -95,7 +78,6 @@ opacity:1;
 transform:translateY(0);
 
 }
-
 
 }
 
@@ -107,7 +89,6 @@ transform:translateY(0);
 
 h2{
 
-
 text-align:center;
 
 color:white;
@@ -116,9 +97,7 @@ font-size:32px;
 
 margin-bottom:20px;
 
-
 }
-
 
 
 
@@ -131,13 +110,11 @@ margin-bottom:20px;
 
 .dashboard{
 
-
 display:flex;
 
 gap:12px;
 
 margin-bottom:20px;
-
 
 }
 
@@ -145,26 +122,18 @@ margin-bottom:20px;
 
 .dashboard div{
 
-
 flex:1;
-
 
 background:white;
 
-
 padding:15px;
-
 
 border-radius:18px;
 
-
 text-align:center;
-
 
 box-shadow:
 0 10px 20px rgba(0,0,0,.1);
-
-
 
 }
 
@@ -172,13 +141,11 @@ box-shadow:
 
 .dashboard h3{
 
-
 margin:0;
 
 font-size:25px;
 
 color:#667eea;
-
 
 }
 
@@ -186,18 +153,13 @@ color:#667eea;
 
 .dashboard p{
 
-
 margin:5px;
 
 font-size:13px;
 
 color:#777;
 
-
 }
-
-
-
 
 
 
@@ -211,27 +173,19 @@ color:#777;
 input,
 select{
 
-
 width:100%;
-
 
 padding:13px;
 
-
 margin:7px 0;
-
 
 border:none;
 
-
 border-radius:14px;
-
 
 outline:none;
 
-
 font-size:14px;
-
 
 }
 
@@ -240,11 +194,8 @@ font-size:14px;
 input:focus,
 select:focus{
 
-
 box-shadow:
-
 0 0 12px white;
-
 
 }
 
@@ -260,49 +211,35 @@ box-shadow:
 
 button{
 
-
 border:none;
-
 
 padding:11px 15px;
 
-
 border-radius:14px;
-
 
 cursor:pointer;
 
-
 color:white;
 
-
 background:
-
 linear-gradient(
 45deg,
 #00c6ff,
 #0072ff
 );
 
-
-
 transition:.3s;
-
 
 }
 
 
 
-
 button:hover{
-
 
 transform:scale(1.08);
 
-
 box-shadow:
 0 10px 20px rgba(0,0,0,.2);
-
 
 }
 
@@ -319,57 +256,43 @@ box-shadow:
 
 ul{
 
-
 padding:0;
 
 margin-top:20px;
-
 
 }
 
 
 
-li{
 
+li{
 
 list-style:none;
 
-
 background:white;
-
 
 padding:15px;
 
-
 margin:12px 0;
-
 
 border-radius:18px;
 
 
 display:flex;
 
+align-items:center;
 
 justify-content:space-between;
 
 
-align-items:center;
-
-
 box-shadow:
-
 0 8px 15px rgba(0,0,0,.1);
 
 
-
 animation:
-
 slide .3s;
 
-
 }
-
-
 
 
 
@@ -400,46 +323,94 @@ transform:translateX(0);
 
 
 
+/* ======================
+ TEXT TASK
+====================== */
 
 
-/* TASK TEXT */
+li div:first-child{
+
+
+flex:1;
+
+padding-right:15px;
+
+overflow-wrap:break-word;
+
+}
+
 
 
 li b{
-
 
 color:#343a40;
 
 font-size:15px;
 
-
 }
 
 
 
 
 
-/* BUTTON TASK */
+
+
+/* ======================
+ BUTTON TASK RAPHI
+====================== */
+
+
+.task-buttons{
+
+
+display:flex;
+
+gap:8px;
+
+min-width:120px;
+
+justify-content:flex-end;
+
+align-items:center;
+
+}
+
+
 
 
 li button{
 
 
-padding:7px 9px;
+width:35px;
 
-font-size:12px;
+height:35px;
 
-margin-left:4px;
+padding:0;
 
+margin:0;
+
+
+border-radius:50%;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+font-size:14px;
 
 }
 
 
 
-/* DONE */
 
 
-li button:first-of-type{
+/* SELESAI */
+
+li button:first-child{
 
 
 background:#20c997;
@@ -452,8 +423,7 @@ background:#20c997;
 
 /* EDIT */
 
-
-li button:nth-of-type(2){
+li button:nth-child(2){
 
 
 background:#fcc419;
@@ -464,16 +434,21 @@ background:#fcc419;
 
 
 
+
 /* DELETE */
 
 
-li button:last-child{
+li button:nth-child(3){
 
 
 background:#ff6b6b;
 
 
 }
+
+
+
+
 
 
 
@@ -486,11 +461,9 @@ background:#ff6b6b;
 
 .priority-high{
 
-
 color:#ff6b6b;
 
 font-weight:bold;
-
 
 }
 
@@ -498,11 +471,9 @@ font-weight:bold;
 
 .priority-medium{
 
-
 color:#fab005;
 
 font-weight:bold;
-
 
 }
 
@@ -510,13 +481,14 @@ font-weight:bold;
 
 .priority-low{
 
-
 color:#20c997;
 
 font-weight:bold;
 
-
 }
+
+
+
 
 
 
@@ -556,7 +528,6 @@ box-shadow:
 
 0 10px 20px rgba(0,0,0,.3);
 
-
 }
 
 
@@ -575,17 +546,14 @@ transform:scale(1.1);
 
 
 
-
 /* LINK */
 
 
 a{
 
-
 color:white;
 
 text-decoration:none;
-
 
 }
 
@@ -613,7 +581,6 @@ width:90%;
 }
 
 
-
 .dashboard{
 
 
@@ -621,6 +588,140 @@ flex-direction:column;
 
 
 }
+
+
+
+.task-buttons{
+
+
+min-width:100px;
+
+}
+
+
+}
+/* ======================
+   PROGRESS BAR
+====================== */
+
+
+.progress-box{
+
+
+background:white;
+
+padding:15px;
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+
+box-shadow:
+0 8px 15px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.progress-header{
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+margin-bottom:10px;
+
+
+color:#667eea;
+
+font-weight:bold;
+
+
+}
+
+
+
+.progress-container{
+
+
+width:100%;
+
+
+height:16px;
+
+
+background:#e9ecef;
+
+
+border-radius:20px;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+
+.progress-bar{
+
+
+height:100%;
+
+
+width:0%;
+
+
+background:
+
+linear-gradient(
+90deg,
+#00c853,
+#64dd17
+);
+
+
+border-radius:20px;
+
+
+transition:.5s;
+
+
+}
+/* ======================
+ DEADLINE REMINDER
+====================== */
+
+
+.warning{
+
+
+color:#ff9800;
+
+font-weight:bold;
+
+font-size:13px;
+
+
+}
+
+
+
+.late{
+
+
+color:#ff1744;
+
+font-weight:bold;
+
+font-size:13px;
 
 
 }

@@ -1,0 +1,626 @@
+/* ======================
+   GLOBAL
+====================== */
+
+*{
+    box-sizing:border-box;
+}
+
+
+
+body{
+
+    font-family:'Segoe UI',sans-serif;
+
+    min-height:100vh;
+
+    margin:0;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/* ======================
+ CONTAINER
+====================== */
+
+
+.container{
+
+
+    width:450px;
+
+
+    padding:30px;
+
+
+    background:
+
+    rgba(255,255,255,0.22);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 25px 50px rgba(0,0,0,.25);
+
+
+
+    animation:show .6s;
+
+
+}
+
+
+
+
+@keyframes show{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* TITLE */
+
+h2{
+
+
+text-align:center;
+
+color:white;
+
+font-size:32px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+/* ======================
+ DASHBOARD
+====================== */
+
+
+.dashboard{
+
+
+display:flex;
+
+gap:12px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.dashboard div{
+
+
+flex:1;
+
+
+background:white;
+
+
+padding:15px;
+
+
+border-radius:18px;
+
+
+text-align:center;
+
+
+box-shadow:
+0 10px 20px rgba(0,0,0,.1);
+
+
+
+}
+
+
+
+.dashboard h3{
+
+
+margin:0;
+
+font-size:25px;
+
+color:#667eea;
+
+
+}
+
+
+
+.dashboard p{
+
+
+margin:5px;
+
+font-size:13px;
+
+color:#777;
+
+
+}
+
+
+
+
+
+
+
+
+/* ======================
+ INPUT
+====================== */
+
+
+input,
+select{
+
+
+width:100%;
+
+
+padding:13px;
+
+
+margin:7px 0;
+
+
+border:none;
+
+
+border-radius:14px;
+
+
+outline:none;
+
+
+font-size:14px;
+
+
+}
+
+
+
+input:focus,
+select:focus{
+
+
+box-shadow:
+
+0 0 12px white;
+
+
+}
+
+
+
+
+
+
+/* ======================
+ BUTTON
+====================== */
+
+
+button{
+
+
+border:none;
+
+
+padding:11px 15px;
+
+
+border-radius:14px;
+
+
+cursor:pointer;
+
+
+color:white;
+
+
+background:
+
+linear-gradient(
+45deg,
+#00c6ff,
+#0072ff
+);
+
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+button:hover{
+
+
+transform:scale(1.08);
+
+
+box-shadow:
+0 10px 20px rgba(0,0,0,.2);
+
+
+}
+
+
+
+
+
+
+
+/* ======================
+ TASK LIST
+====================== */
+
+
+ul{
+
+
+padding:0;
+
+margin-top:20px;
+
+
+}
+
+
+
+li{
+
+
+list-style:none;
+
+
+background:white;
+
+
+padding:15px;
+
+
+margin:12px 0;
+
+
+border-radius:18px;
+
+
+display:flex;
+
+
+justify-content:space-between;
+
+
+align-items:center;
+
+
+box-shadow:
+
+0 8px 15px rgba(0,0,0,.1);
+
+
+
+animation:
+
+slide .3s;
+
+
+}
+
+
+
+
+
+@keyframes slide{
+
+
+from{
+
+opacity:0;
+
+transform:translateX(-30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* TASK TEXT */
+
+
+li b{
+
+
+color:#343a40;
+
+font-size:15px;
+
+
+}
+
+
+
+
+
+/* BUTTON TASK */
+
+
+li button{
+
+
+padding:7px 9px;
+
+font-size:12px;
+
+margin-left:4px;
+
+
+}
+
+
+
+/* DONE */
+
+
+li button:first-of-type{
+
+
+background:#20c997;
+
+
+}
+
+
+
+
+/* EDIT */
+
+
+li button:nth-of-type(2){
+
+
+background:#fcc419;
+
+
+}
+
+
+
+
+/* DELETE */
+
+
+li button:last-child{
+
+
+background:#ff6b6b;
+
+
+}
+
+
+
+
+
+/* ======================
+ PRIORITY STYLE
+====================== */
+
+
+.priority-high{
+
+
+color:#ff6b6b;
+
+font-weight:bold;
+
+
+}
+
+
+
+.priority-medium{
+
+
+color:#fab005;
+
+font-weight:bold;
+
+
+}
+
+
+
+.priority-low{
+
+
+color:#20c997;
+
+font-weight:bold;
+
+
+}
+
+
+
+
+
+
+/* ======================
+ LOGOUT
+====================== */
+
+
+.logout-btn{
+
+
+position:fixed;
+
+
+right:25px;
+
+
+bottom:25px;
+
+
+background:
+
+linear-gradient(
+45deg,
+#ff416c,
+#ff4b2b
+);
+
+
+padding:14px 22px;
+
+
+box-shadow:
+
+0 10px 20px rgba(0,0,0,.3);
+
+
+}
+
+
+
+.logout-btn:hover{
+
+
+transform:scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+/* LINK */
+
+
+a{
+
+
+color:white;
+
+text-decoration:none;
+
+
+}
+
+
+
+
+
+
+
+
+/* ======================
+ MOBILE
+====================== */
+
+
+@media(max-width:500px){
+
+
+.container{
+
+
+width:90%;
+
+
+}
+
+
+
+.dashboard{
+
+
+flex-direction:column;
+
+
+}
+
+
+}

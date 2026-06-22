@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home</title>
+
+</head>
+
+
+<body onload="checkLogin(); loadTasks()">
+
+
+
+<div class="container">
+
+
+
+    <h2>📝 To-Do List</h2>
+
+
+
+    <!-- DASHBOARD -->
+
+<div class="dashboard">
+
+
+    <div>
+
+        <h3 id="totalTask">0</h3>
+
+        <p>Total</p>
+
+    </div>
+
+
+
+    <div>
+
+        <h3 id="doneTask">0</h3>
+
+        <p>Selesai</p>
+
+    </div>
+
+
+
+    <div>
+
+        <h3 id="pendingTask">0</h3>
+
+        <p>Belum</p>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- PROGRESS BAR -->
+
+
+<div class="progress-box">
+
+
+    <div class="progress-header">
+
+        <span>
+            Progress Task
+        </span>
+
+
+        <b id="progressText">
+            0%
+        </b>
+
+    </div>
+
+
+
+    <div class="progress-container">
+
+
+        <div
+        id="progressBar"
+        class="progress-bar">
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+    <!-- INPUT TASK -->
+
+
+    <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Tulis tugas"
+    >
+
+
+
+
+    <!-- DEADLINE -->
+
+    <input 
+        type="date"
+        id="deadline"
+    >
+
+
+
+
+
+    <!-- PRIORITY -->
+
+    <select id="priority">
+
+
+        <option value="Low">
+
+            Low
+
+        </option>
+
+
+        <option value="Medium">
+
+            Medium
+
+        </option>
+
+
+        <option value="High">
+
+            High
+
+        </option>
+
+
+
+    </select>
+
+
+
+
+
+    <button onclick="addTask()">
+
+        Tambah
+
+    </button>
+
+
+
+
+
+    <!-- SEARCH -->
+
+    <input
+
+        type="text"
+
+        id="searchInput"
+
+        placeholder="🔍 Cari tugas..."
+
+        onkeyup="searchTask()"
+
+    >
+
+
+
+
+
+
+    <!-- FILTER -->
+
+
+    <select
+
+        id="filter"
+
+        onchange="filterTask()"
+
+    >
+
+
+
+        <option value="all">
+
+            Semua Task
+
+        </option>
+
+
+
+
+        <option value="done">
+
+            Selesai
+
+        </option>
+
+
+
+
+
+        <option value="undone">
+
+            Belum Selesai
+
+        </option>
+
+
+
+    </select>
+
+<!-- EDIT AREA -->
+
+<div id="editBox" style="display:none;">
+
+    <input 
+        type="text"
+        id="editInput"
+        placeholder="Edit tugas..."
+    >
+
+    <button onclick="saveEdit()">
+        Simpan Edit
+    </button>
+
+    <button onclick="cancelEdit()">
+        Batal
+    </button>
+
+</div>
+
+
+
+
+    <ul id="taskList"></ul>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<button 
+
+    class="logout-btn" 
+
+    onclick="logout()">
+
+
+    Logout
+
+
+</button>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
